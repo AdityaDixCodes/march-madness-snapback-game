@@ -16,7 +16,7 @@ export default function Lobby() {
   const [playerCount, setPlayerCount] = useState(1)
 
   useEffect(() => {
-    const socket = io('http://localhost:3001', { transports: ['websocket'] })
+    const socket = io('https://march-madness-snapback-game-production.up.railway.app', { transports: ['websocket'] })
     socketRef.current = socket
 
     const emitFindGame = () => {

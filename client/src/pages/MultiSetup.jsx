@@ -27,7 +27,7 @@ export default function MultiSetup() {
   const [status, setStatus] = useState('selecting')
 
   useEffect(() => {
-    const socket = io('http://localhost:3001', { transports: ['websocket'] })
+    const socket = io('https://march-madness-snapback-game-production.up.railway.app', { transports: ['websocket'] })
     socketRef.current = socket
 
     socket.on('connect', () => {

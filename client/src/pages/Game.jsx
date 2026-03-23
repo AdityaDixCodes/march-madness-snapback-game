@@ -110,7 +110,7 @@ export default function Game() {
     setMessages(prev => [...prev, { role: 'player', text: question }])
 
     try {
-      const response = await fetch('http://localhost:3001/api/ask', {
+      const response = await fetch('https://march-madness-snapback-game-production.up.railway.app/api/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
